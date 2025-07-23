@@ -1,0 +1,46 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblCommunication>
+
+@{
+    ViewBag.Title = "İletişim Bilgileri Listesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-info"><h2>İletişim Listesi</h2></div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Adres</th>
+                <th>E-posta</th>
+                <th>Telefon</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.CommunicationId</td>
+                    <td>@item.Adress</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Telephone</td>
+                    <td>
+                        <a href="/Communication/UpdateCommunication/@item.CommunicationId" class="btn btn-warning btn-sm">Güncelle</a>
+                        @using (Html.BeginForm("DeleteCommunication", "Communication", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.CommunicationId)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Communication/CreateCommunication/" class="btn btn-primary">Yeni İletişim Bilgisi Ekle</a>
+</div>

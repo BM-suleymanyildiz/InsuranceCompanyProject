@@ -1,0 +1,39 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblQuestion>
+
+@{
+    ViewBag.Title = "QuestionList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-info"><h2>Sorular Listesi</h2></div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Soru</th>
+                <th>Cevap</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.QuestionId</td>
+                    <td>@item.Questioon</td>
+                    <td>@item.Answer</td>
+                    <td>
+                        <a href="@Url.Action("UpdateQuestion", "Question", new { id = item.QuestionId })" class="btn btn-warning btn-sm">Güncelle</a>
+                        <a href="@Url.Action("DeleteQuestion", "Question", new { id = item.QuestionId })" class="btn btn-danger btn-sm">Sil</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("CreateQuestion", "Question")" class="btn btn-primary">Yeni Soru Ekle</a>
+</div>

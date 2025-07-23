@@ -1,0 +1,327 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutAwards" xml:space="preserve">
+    <value>Awards</value>
+  </data>
+  <data name="AboutMoreInformation" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="AboutPolicies" xml:space="preserve">
+    <value>Insurance Policies</value>
+  </data>
+  <data name="AboutSkill" xml:space="preserve">
+    <value>Qualified Representatives</value>
+  </data>
+  <data name="AboutSlogan1" xml:space="preserve">
+    <value>We can protect your money.</value>
+  </data>
+  <data name="AboutSlogan2" xml:space="preserve">
+    <value>Product production or trade</value>
+  </data>
+  <data name="AboutSlogan3" xml:space="preserve">
+    <value>Our life insurance is flexible</value>
+  </data>
+  <data name="AboutSubTitle" xml:space="preserve">
+    <value>Comprehensive Assurance Options</value>
+  </data>
+  <data name="AboutTeam" xml:space="preserve">
+    <value>Team Members</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>About Our Company</value>
+  </data>
+  <data name="EmployeeSubtitle" xml:space="preserve">
+    <value>Meet Our Expert Team Members</value>
+  </data>
+  <data name="EmployeeTitle" xml:space="preserve">
+    <value>Our Team</value>
+  </data>
+  <data name="FeatureLearnMore" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="FeatureSubTitle" xml:space="preserve">
+    <value>Insurance Gives You a Better Future</value>
+  </data>
+  <data name="FeatureTitle" xml:space="preserve">
+    <value>Our Features</value>
+  </data>
+  <data name="FooterAbout" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="FooterAdress" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="FooterCall" xml:space="preserve">
+    <value>Reach Our Experts by Phone</value>
+  </data>
+  <data name="FooterCommun" xml:space="preserve">
+    <value>Communication</value>
+  </data>
+  <data name="FooterDist" xml:space="preserve">
+    <value>Distribution:</value>
+  </data>
+  <data name="FooterFeature" xml:space="preserve">
+    <value>Features</value>
+  </data>
+  <data name="Footerlink" xml:space="preserve">
+    <value>Useful Links</value>
+  </data>
+  <data name="FooterNewsletter" xml:space="preserve">
+    <value>newsletter</value>
+  </data>
+  <data name="Footerplaceholdermail" xml:space="preserve">
+    <value>Enter your email</value>
+  </data>
+  <data name="FooterReser" xml:space="preserve">
+    <value>All rights reserved.</value>
+  </data>
+  <data name="FooterSendMail" xml:space="preserve">
+    <value>Send Email</value>
+  </data>
+  <data name="FooterServices" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="FooterSignup" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
+  <data name="FooterSite" xml:space="preserve">
+    <value>Your Site Name</value>
+  </data>
+  <data name="FooterSSS" xml:space="preserve">
+    <value>SSS</value>
+  </data>
+  <data name="FooterTel" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="FootterDesign" xml:space="preserve">
+    <value>Design:</value>
+  </data>
+  <data name="HeaderLood" xml:space="preserve">
+    <value>Looding...</value>
+  </data>
+  <data name="HeaderTitle" xml:space="preserve">
+    <value>Star Life Insurance Website</value>
+  </data>
+  <data name="Lan1" xml:space="preserve">
+    <value>Turkish</value>
+  </data>
+  <data name="Lan2" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="ModalKeyWords" xml:space="preserve">
+    <value>Search by keyword</value>
+  </data>
+  <data name="Nav404" xml:space="preserve">
+    <value>404 Pages</value>
+  </data>
+  <data name="NavAbout" xml:space="preserve">
+    <value>About Us</value>
+  </data>
+  <data name="NavCallExper" xml:space="preserve">
+    <value>Reach our experts</value>
+  </data>
+  <data name="NavCommun" xml:space="preserve">
+    <value>Communication</value>
+  </data>
+  <data name="NavFeatures" xml:space="preserve">
+    <value>Our Features</value>
+  </data>
+  <data name="NavFind" xml:space="preserve">
+    <value>Find Location</value>
+  </data>
+  <data name="NavFree" xml:space="preserve">
+    <value>Free:</value>
+  </data>
+  <data name="NavGet" xml:space="preserve">
+    <value>Get a Quote</value>
+  </data>
+  <data name="NavHome" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="NavPages" xml:space="preserve">
+    <value>Pages</value>
+  </data>
+  <data name="NavServices" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="NavSSS" xml:space="preserve">
+    <value>SSS</value>
+  </data>
+  <data name="NavTeam" xml:space="preserve">
+    <value>Our team</value>
+  </data>
+  <data name="NavTest" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="Question1" xml:space="preserve">
+    <value>What happens during Freshman Week?</value>
+  </data>
+  <data name="Question2" xml:space="preserve">
+    <value>What is the transfer application process?</value>
+  </data>
+  <data name="Question3" xml:space="preserve">
+    <value>Why should I go to community college?</value>
+  </data>
+  <data name="QuestionAns1" xml:space="preserve">
+    <value>Leverage agile frameworks to provide a robust summary for high-level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further advance the overall value proposition. Organically develop a holistic worldview of disruptive innovation through workplace diversity and empowerment.</value>
+  </data>
+  <data name="QuestionAns2" xml:space="preserve">
+    <value>Leverage agile frameworks to provide a robust summary for high-level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further advance the overall value proposition. Organically develop a holistic worldview of disruptive innovation through workplace diversity and empowerment.</value>
+  </data>
+  <data name="QuestionAns3" xml:space="preserve">
+    <value>Leverage agile frameworks to provide a robust summary for high-level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further advance the overall value proposition. Organically develop a holistic worldview of disruptive innovation through workplace diversity and empowerment.</value>
+  </data>
+  <data name="QuestionSubTitle" xml:space="preserve">
+    <value>Commonly Asked Questions</value>
+  </data>
+  <data name="QuestionTitle" xml:space="preserve">
+    <value>Some Important Frequently Asked Questions</value>
+  </data>
+  <data name="ServiccesSubTitle" xml:space="preserve">
+    <value>We Offer the Best Services</value>
+  </data>
+  <data name="Servicesother" xml:space="preserve">
+    <value>Other Services</value>
+  </data>
+  <data name="ServicesReadmore" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="ServicesTitle" xml:space="preserve">
+    <value>Our services</value>
+  </data>
+  <data name="SliderLearnMore" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="SliderWatchVideo" xml:space="preserve">
+    <value>Watch Video</value>
+  </data>
+  <data name="SliderWelcome1" xml:space="preserve">
+    <value>WELCOME TO YILDIZ INSURANCE</value>
+  </data>
+  <data name="SliderWelcome2" xml:space="preserve">
+    <value>Life Insurance Brings Happinessv</value>
+  </data>
+  <data name="TestimTitle" xml:space="preserve">
+    <value>References</value>
+  </data>
+  <data name="TetimSubtitle" xml:space="preserve">
+    <value>What Our References Say</value>
+  </data>
+</root>

@@ -1,0 +1,93 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblQuestion
+
+@{
+    ViewBag.Title = "CreateQuestion";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-primary"><h2>Yeni soru Ekle</h2></div>
+    @using (Html.BeginForm("CreateQuestion", "Question", FormMethod.Post))
+    {
+        <div class="form-group mb-3">
+            <label for="Question">Soru Başlığı</label>
+            @Html.TextBoxFor(m => m.Questioon, new { @class = "form-control", placeholder = "Soru başlığını giriniz" })
+        </div>
+
+        <div class="form-group mb-3">
+            <label for="Answer">Soru Cevabı</label>
+            @Html.TextBoxFor(m => m.Answer, new { @class = "form-control", placeholder = "Cevabı giriniz", rows = 4 })
+        </div>
+
+        <button type="submit" class="btn btn-success">Kaydet</button>
+    }
+</div>
+
+<!-- Yapay Zeka ile Soru Oluşturma Bölümü -->
+<div class="container mt-5">
+    <div class="card">
+        <div class="card-header bg-info text-white">
+            <strong>Yapay Zeka ile Soru Oluştur</strong>
+        </div>
+        <div class="card-body">
+            <div class="form-group mb-3">
+                <label for="ai-topic-standalone">Konu</label>
+                <input type="text" id="ai-topic-standalone" class="form-control" placeholder="Konu giriniz (ör: kasko, sağlık sigortası...)" />
+            </div>
+            <button type="button" id="ai-generate-standalone-btn" class="btn btn-primary">Yapay Zeka ile Soru Oluştur</button>
+            <div id="ai-result-area" class="mt-4" style="display:none;">
+                <div class="alert alert-secondary">
+                    <strong>Üretilen Soru:</strong>
+                    <div id="ai-question" class="mb-2"></div>
+                    <strong>Üretilen Cevap:</strong>
+                    <div id="ai-answer"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function () {
+            $('#ai-generate-standalone-btn').on('click', function () {
+                var btn = $(this);
+                var topic = $('#ai-topic-standalone').val();
+                if (!topic) {
+                    alert('Lütfen bir konu giriniz!');
+                    return;
+                }
+                btn.prop('disabled', true).text('Üretiliyor...');
+                $('#ai-result-area').hide();
+                $.ajax({
+                    url: '/Question/GenerateAIQuestion',
+                    type: 'POST',
+                    data: { topic: topic },
+                    success: function (data) {
+                        if (data.error) {
+                            alert('Hata: ' + data.error);
+                            return;
+                        }
+                        if (data.question || data.answer) {
+                            $('#ai-question').text(data.question || '');
+                            $('#ai-answer').text(data.answer || '');
+                            $('#ai-result-area').show();
+                        } else {
+                            $('#ai-result-area').hide();
+                            alert('Yapay zeka ile soru üretilemedi.');
+                        }
+                    },
+                    error: function () {
+                        alert('Yapay zeka ile soru üretilemedi.');
+                    },
+                    complete: function () {
+                        btn.prop('disabled', false).text('Yapay Zeka ile Soru Oluştur');
+                    }
+                });
+            });
+        });
+    </script>
+}

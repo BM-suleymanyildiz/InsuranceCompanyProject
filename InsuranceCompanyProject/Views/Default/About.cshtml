@@ -1,0 +1,78 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblAbout>
+
+<div class="container-fluid bg-light about pb-5">
+    @foreach (var item in Model)
+    {
+        <div class="container pb-5">
+            <div class="row g-5">
+                <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                    <div class="about-item-content bg-white rounded p-5 h-100">
+                        <h4 class="text-primary">@Resources.Messages.AboutTitle</h4>
+                        <h1 class="display-4 mb-4">@Resources.Messages.AboutSubTitle</h1>
+                        <p>
+                            @item.AboutDescription1
+                        </p>
+                        <p>
+                            @item.AboutDescription2
+                        </p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>@Resources.Messages.AboutSlogan1</p>
+                        <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>@Resources.Messages.AboutSlogan2</p>
+                        <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>@Resources.Messages.AboutSlogan3</p>
+                        <a class="btn btn-primary rounded-pill py-3 px-5" href="#">@Resources.Messages.AboutMoreInformation</a>
+                    </div>
+                </div>
+                <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                    <div class="bg-white rounded p-5 h-100">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-12">
+                                <div class="rounded bg-light">
+                                    <img src="@item.ImageUrl" class="img-fluid rounded w-100" alt="">
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">@item.InsurancePoliciesCount</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">
+                                        @Resources.Messages.AboutPolicies
+                                    </h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">@item.AwardsCount</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">@Resources.Messages.AboutAwards</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">@item.SkilledAgentsCount</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">@Resources.Messages.AboutSkill</h4>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="counter-item bg-light rounded p-3 h-100">
+                                    <div class="counter-counting">
+                                        <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">@item.TeamMembersCount</span>
+                                        <span class="h1 fw-bold text-primary">+</span>
+                                    </div>
+                                    <h4 class="mb-0 text-dark">
+                                        @Resources.Messages.AboutTeam
+                                    </h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

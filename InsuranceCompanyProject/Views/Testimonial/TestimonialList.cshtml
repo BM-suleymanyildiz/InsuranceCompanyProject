@@ -1,0 +1,53 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblTestimonial>
+
+@{
+    ViewBag.Title = "TestimonialList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <h2>Referans Listesi</h2>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+
+                <th>İsim</th>
+                <th>Soyisim</th>
+                <th>Meslek</th>
+                <th>Puan</th>
+                <th>Yorum</th>
+                <th>Görsel</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TestimonialId</td>
+                   
+                    <td>@item.TestimonialName</td>
+                    <td>@item.TestimonialSurname</td>
+                    <td>@item.TestimonialJob</td>
+                    <td>@item.TestimonialPoint</td>
+                    <td>@item.TestimonialComment</td>
+                    <td>@item.TestimonialImageUrl</td>
+                    <td>
+                        <a href="/Testimonial/UpdateTestimonial/@item.TestimonialId" class="btn btn-warning btn-sm">Güncelle</a>
+                        @using (Html.BeginForm("DeleteTestimonial", "Testimonial", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.TestimonialId)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Testimonial/CreateTestimonial" class="btn btn-primary">Yeni Referans Ekle</a>
+</div>

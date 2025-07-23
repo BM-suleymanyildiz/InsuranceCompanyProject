@@ -1,0 +1,48 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblSlider>
+
+@{
+    ViewBag.Title = "SliderList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+
+
+<div class="container mt-4">
+    <div class="alert alert-info"><h2>Slider Listesi</h2></div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Slider Başlık</th>
+                <th>Slider Alt Başlık</th>
+                <th>Slider Tanım</th>
+                <th>Slider Görsel Url</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SliderId</td>
+                    <td>@item.SliderTitle</td>
+                    <td>@item.SliderSubtitle</td>
+                    <td>@item.SliderDescription</td>
+                    <td>@item.SliderImageUrl</td>
+                    <td>
+                        <a href="/Slider/UpdateSlider/@item.SliderId" class="btn btn-warning btn-sm">Güncelle</a>
+                        @using (Html.BeginForm("DeleteSlider", "Slider", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.SliderId)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="/Slider/CreateSlider/" class="btn btn-primary">Yeni Slider Ekle</a>
+</div>

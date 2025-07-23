@@ -1,0 +1,47 @@
+﻿@model List<InsuranceCompanyProject.Models.DataModels.TblFeature>
+
+@{
+    ViewBag.Title = "FeatureList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-info"><h2>Özellikler Listesi</h2></div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+
+                <th>Kart İkonu</th>
+                <th>Kart Başlığı</th>
+                <th>Kart Açıklaması</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FeatureId</td>
+
+                    <td>@item.FeatureCardIcon</td>
+                    <td>@item.FeatureCardTitle</td>
+                    <td>@item.FeatureCardDescription</td>
+                    <td>
+                        <a href="@Url.Action("UpdateFeature", "Feature", new { id = item.FeatureId })" class="btn btn-warning btn-sm">Güncelle</a>
+                        @using (Html.BeginForm("DeleteFeature", "Feature", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.FeatureId)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="@Url.Action("CreateFeature", "Feature")" class="btn btn-primary">Yeni Özellik Ekle</a>
+</div>

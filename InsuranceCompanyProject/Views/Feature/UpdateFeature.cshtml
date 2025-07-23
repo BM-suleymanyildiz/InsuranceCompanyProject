@@ -1,0 +1,33 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblFeature
+
+@{
+    ViewBag.Title = "Özellik Güncelle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-warning"><h2>Özellik Güncelle</h2></div>
+    @using (Html.BeginForm("UpdateFeature", "Feature", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.FeatureId)
+
+
+
+        <label>Kart İkonu</label>
+        @Html.TextBoxFor(m => m.FeatureCardIcon, new { @class = "form-control" })
+        <br />
+
+        <label>Kart Başlığı</label>
+        @Html.TextBoxFor(m => m.FeatureCardTitle, new { @class = "form-control" })
+        <br />
+
+        <label>Kart Açıklaması</label>
+        @Html.TextBoxFor(m => m.FeatureCardDescription, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+
+    }
+</div>

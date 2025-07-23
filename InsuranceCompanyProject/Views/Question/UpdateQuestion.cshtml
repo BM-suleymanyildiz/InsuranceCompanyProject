@@ -1,0 +1,28 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblQuestion
+
+@{
+    ViewBag.Title = "UpdateQuestion";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-warning"><h2>Soru Güncelle</h2></div>
+
+    @using (Html.BeginForm("UpdateQuestion", "Question", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.QuestionId) <!-- ID bilgisi gerekli -->
+
+        <label>Soru Başlığı</label>
+        @Html.TextBoxFor(m => m.Questioon, new { @class = "form-control", placeholder = "Soru başlığı giriniz" })
+        <br />
+
+        <label>Soru Cevabı</label>
+        @Html.TextBoxFor(m => m.Answer, new { @class = "form-control", placeholder = "Cevabı giriniz" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+
+    }
+</div>

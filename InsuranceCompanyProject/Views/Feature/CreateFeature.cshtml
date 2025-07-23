@@ -1,0 +1,32 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblFeature
+
+@{
+    ViewBag.Title = "Yeni Özellik Ekle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-primary"><h2>Yeni Özellik Ekle</h2></div>
+
+    @using (Html.BeginForm("CreateFeature", "Feature", FormMethod.Post))
+    {
+
+
+        <label>Kart İkonu</label>
+        @Html.TextBoxFor(m => m.FeatureCardIcon, new { @class = "form-control" })
+        <br />
+
+        <label>Kart Başlığı</label>
+        @Html.TextBoxFor(m => m.FeatureCardTitle, new { @class = "form-control" })
+        <br />
+
+        <label>Kart Açıklaması</label>
+        @Html.TextBoxFor(m => m.FeatureCardDescription, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Kaydet</button>
+
+    }
+</div>

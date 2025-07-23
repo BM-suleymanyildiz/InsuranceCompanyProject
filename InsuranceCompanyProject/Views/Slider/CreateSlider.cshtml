@@ -1,0 +1,33 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblSlider
+
+@{
+    ViewBag.Title = "CreateSlider";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-primary"><h2>Yeni Slider Ekle</h2></div>
+
+    @using (Html.BeginForm("CreateSlider", "Slider", FormMethod.Post))
+    {
+        <label>Slider Başlık</label>
+        @Html.TextBoxFor(m => m.SliderTitle, new { @class = "form-control" })
+        <br />
+
+        <label>Slider Alt Başlık</label>
+        @Html.TextBoxFor(m => m.SliderSubtitle, new { @class = "form-control" })
+        <br />
+
+        <label>Slider Tanım</label>
+        @Html.TextBoxFor(m => m.SliderDescription, new { @class = "form-control" })
+        <br />
+
+        <label>Slider Görsel Url</label>
+        @Html.TextBoxFor(m => m.SliderImageUrl, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Kaydet</button>
+    }
+</div>

@@ -1,0 +1,33 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblCommunication
+
+@{
+    ViewBag.Title = "İletişim Bilgisi Güncelle";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-warning"><h2>İletişim Bilgisi Güncelle</h2></div>
+
+    @using (Html.BeginForm("UpdateCommunication", "Communication", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.CommunicationId)
+
+        <label>Adres</label>
+        @Html.TextBoxFor(m => m.Adress, new { @class = "form-control" })
+        <br />
+
+        <label>E-posta</label>
+        @Html.TextBoxFor(m => m.Mail, new { @class = "form-control", type = "email" })
+        <br />
+
+        <label>Telefon</label>
+        @Html.TextBoxFor(m => m.Telephone, new { @class = "form-control", type = "tel" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+
+
+    }
+</div>

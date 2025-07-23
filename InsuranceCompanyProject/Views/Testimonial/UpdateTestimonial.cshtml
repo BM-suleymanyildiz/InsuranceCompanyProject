@@ -1,0 +1,45 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblTestimonial
+
+@{
+    ViewBag.Title = "UpdateTestimonial";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-warning"><h2>Referans Güncelle</h2></div>
+
+    @using (Html.BeginForm("UpdateTestimonial", "Testimonial", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.TestimonialId) <!-- Güncellenecek kaydın ID'si -->
+
+     
+
+        <label>İsim</label>
+        @Html.TextBoxFor(m => m.TestimonialName, new { @class = "form-control" })
+        <br />
+
+        <label>Soyisim</label>
+        @Html.TextBoxFor(m => m.TestimonialSurname, new { @class = "form-control" })
+        <br />
+
+        <label>Meslek</label>
+        @Html.TextBoxFor(m => m.TestimonialJob, new { @class = "form-control" })
+        <br />
+
+        <label>Puan</label>
+        @Html.TextBoxFor(m => m.TestimonialPoint, new { @class = "form-control", type = "number", min = "1", max = "5" })
+        <br />
+
+        <label>Görsel URL</label>
+        @Html.TextBoxFor(m => m.TestimonialImageUrl, new { @class = "form-control" })
+        <br />
+
+        <label>Yorum</label>
+        @Html.TextAreaFor(m => m.TestimonialComment, new { @class = "form-control", rows = 4 })
+        <br />
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+    }
+</div>

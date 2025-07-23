@@ -1,0 +1,68 @@
+﻿@model InsuranceCompanyProject.Models.DataModels.TblAbout
+
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-warning"><h2>Hakkımzda Bilgisi Güncelle</h2></div>
+
+    @using (Html.BeginForm("UpdateAbout", "About", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.AboutId)
+
+        <label>Başlık</label>
+        @Html.TextBoxFor(m => m.AboutTitle, new { @class = "form-control" })
+        <br />
+
+        <label>Alt Başlık</label>
+        @Html.TextBoxFor(m => m.AboutSubtitle, new { @class = "form-control" })
+        <br />
+
+        <label>Açıklama 1</label>
+        @Html.TextBoxFor(m => m.AboutDescription1, new { @class = "form-control" })
+        <br />
+
+        <label>Açıklama 2</label>
+        @Html.TextBoxFor(m => m.AboutDescription2, new { @class = "form-control" })
+        <br />
+
+        <label>Slogan 1</label>
+        @Html.TextBoxFor(m => m.AboutSlogan1, new { @class = "form-control" })
+        <br />
+
+        <label>Slogan 2</label>
+        @Html.TextBoxFor(m => m.AboutSlogan2, new { @class = "form-control" })
+        <br />
+
+        <label>Slogan 3</label>
+        @Html.TextBoxFor(m => m.AboutSlogan3, new { @class = "form-control" })
+        <br />
+
+        <label>Sigorta Poliçe Sayısı</label>
+        @Html.TextBoxFor(m => m.InsurancePoliciesCount, new { @class = "form-control", type = "number" })
+        <br />
+
+        <label>Ödüller Sayısı</label>
+        @Html.TextBoxFor(m => m.AwardsCount, new { @class = "form-control", type = "number" })
+        <br />
+
+        <label>Uzman Temsilci Sayısı</label>
+        @Html.TextBoxFor(m => m.SkilledAgentsCount, new { @class = "form-control", type = "number" })
+        <br />
+
+        <label>Takım Üyesi Sayısı</label>
+        @Html.TextBoxFor(m => m.TeamMembersCount, new { @class = "form-control", type = "number" })
+        <br />
+
+        <label>Görsel URL</label>
+        @Html.TextBoxFor(m => m.ImageUrl, new { @class = "form-control" })
+        <br />
+
+        <button type="submit" class="btn btn-success">Güncelle</button>
+
+    }
+</div>

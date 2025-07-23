@@ -1,0 +1,65 @@
+﻿
+@model List<InsuranceCompanyProject.Models.DataModels.TblAbout>
+
+@{
+    ViewBag.Title = "AboutList";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+
+<div class="container mt-4">
+    <div class="alert alert-info"><h2>Hakkımızda Bilgi Listesi</h2></div>
+
+    <table class="table table-bordered table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Hakkımızda Başlık</th>
+                <th>Hakkımızda Alt Başlık</th>
+                <th>Hakkımızda Açıklama 1</th>
+                <th>Hakkımızda Açıklama 2</th>
+                <th>Hakkımızda Slogan 1</th>
+                <th>Hakkımızda Slogan 2</th>
+                <th>Hakkımızda Slogan 3</th>
+                <th>Hakkımızda Poliçe Sayısı</th>
+                <th>Hakkımızda Ödül Sayısı</th>
+                <th>Hakkımızda Uzman Sayısı</th>
+                <th>Hakkımızda Takım Üyesi Sayısı</th>
+                <th>Resim URL</th>
+                <th>İşlemler</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.AboutId</td>
+                    <td>@item.AboutTitle</td>
+                    <td>@item.AboutSubtitle</td>
+                    <td>@item.AboutDescription1</td>
+                    <td>@item.AboutDescription2</td>
+                    <td>@item.AboutSlogan1</td>
+                    <td>@item.AboutSlogan2</td>
+                    <td>@item.AboutSlogan3</td>
+                    <td>@item.InsurancePoliciesCount</td>
+                    <td>@item.AwardsCount</td>
+                    <td>@item.SkilledAgentsCount</td>
+                    <td>@item.TeamMembersCount</td>
+                    <td>@item.ImageUrl</td>
+                    <td>
+                        <a href="/About/UpdateAbout/@item.AboutId" class="btn btn-warning btn-sm">Güncelle</a>
+                        @using (Html.BeginForm("DeleteAbout", "About", FormMethod.Post))
+                        {
+                            @Html.Hidden("id", item.AboutId)
+                            <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Silmek istediğinize emin misiniz?');">Sil</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/About/CreateAbout/" class="btn btn-primary">Yeni Hakkımızda Bilgisi Ekle</a>
+</div>
+

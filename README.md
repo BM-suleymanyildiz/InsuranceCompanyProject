@@ -98,8 +98,6 @@ Proje, hem içerik yöneticilerine sezgisel bir admin paneli sunar hem de kullan
 
 <img width="1298" height="803" alt="Ekran görüntüsü 2025-07-23 215332" src="https://github.com/user-attachments/assets/4f90162c-d946-4dd4-96ed-3be70691c282" />
 
-<img width="1919" height="903" alt="Ekran görüntüsü 2025-07-23 215419" src="https://github.com/user-attachments/assets/1538477b-7316-4fab-bfd4-3cea98e99249" />
-
 <img width="1919" height="657" alt="Ekran görüntüsü 2025-07-23 215443" src="https://github.com/user-attachments/assets/0c7f3145-a2e8-469b-b8bb-1520c21051c7" />
 
 

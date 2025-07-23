@@ -1,4 +1,4 @@
-# 🛡️ InsuranceCompanyProject – AI Destekli Sigorta Web Uygulaması 🚀
+# 🛡️ InsuranceCompanyProject – AI Destekli Sigorta Web Uygulaması 
 
 **InsuranceCompanyProject**, ASP.NET MVC 5 ve Entity Framework (DB-First) mimarisi ile geliştirilmiş, yapay zeka destekli modern bir sigorta firması yönetim platformudur.  
 Proje, hem içerik yöneticilerine sezgisel bir admin paneli sunar hem de kullanıcı tarafında modern, görsel ve etkileşimli bir deneyim sağlar.
@@ -102,7 +102,7 @@ Proje, hem içerik yöneticilerine sezgisel bir admin paneli sunar hem de kullan
 
 <img width="1919" height="657" alt="Ekran görüntüsü 2025-07-23 215443" src="https://github.com/user-attachments/assets/0c7f3145-a2e8-469b-b8bb-1520c21051c7" />
 
-<img width="1899" height="599" alt="Ekran görüntüsü 2025-07-23 215601" src="https://github.com/user-attachments/assets/77e50759-0993-4629-bf0c-74f8bdb50bee" />
+
 
 ---
 
